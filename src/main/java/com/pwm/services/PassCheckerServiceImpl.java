@@ -12,11 +12,12 @@ import com.pwm.utils.Numeros;
 import com.pwm.utils.Regexs;
 
 @Service
-public class PassCheckerService {
+public class PassCheckerServiceImpl implements PassCheckerService {
 	
 	@Autowired
 	private VariavelChecarSenha variaveis;
 
+	@Override
 	public MeterResultBean checarSenha(String senha) {
 		variaveis.inicializar();
 		variaveis.setScore(senha.length() * Multiplicadores.TAMANHO);
@@ -294,7 +295,7 @@ public class PassCheckerService {
 
 	private void validarSenhaCaracteres(int a) {
 		if (a > Numeros.ZERO && a < (variaveis.getPasswordArrayLength() - Numeros.UM)) {
-			variaveis.incrementaCaractereAoMeio();
+			variaveis.incrementarCaractereAoMeio();
 		}
 		if (variaveis.getSimboloTemporario() != Numeros.MENOS_UM) {
 			if ((variaveis.getSimboloTemporario() + Numeros.UM) == a) {
@@ -308,7 +309,7 @@ public class PassCheckerService {
 
 	private void validarSenhaNumeros(int a) {
 		if (a > Numeros.ZERO && a < (variaveis.getPasswordArrayLength() - Numeros.UM)) {
-			variaveis.incrementaCaractereAoMeio();
+			variaveis.incrementarCaractereAoMeio();
 		}
 		if (variaveis.getNumeroTemporario() != Numeros.MENOS_UM) {
 			if ((variaveis.getNumeroTemporario() + Numeros.UM) == a) {

@@ -156,6 +156,7 @@ public class VariavelChecarSenha implements Serializable {
 		this.requerimentosBonus = Constantes.VAZIO;
 		this.simbolosSequenciaisBonus = Constantes.VAZIO;
 		this.caractereAoMeioBonus = Constantes.VAZIO;
+		this.passwordArray = new String[1];
 	}
 
 	public int getScore() {
@@ -238,7 +239,7 @@ public class VariavelChecarSenha implements Serializable {
 		this.caractereAoMeio = caractereAoMeio;
 	}
 	
-	public void incrementaCaractereAoMeio() {
+	public void incrementarCaractereAoMeio() {
 		this.caractereAoMeio++;
 	}
 

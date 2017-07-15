@@ -10,6 +10,11 @@ public class MeterResultBean {
 	private int score;
 	
 	private List<MeterResultItem> itens;
+	
+
+	public MeterResultBean() {
+		super();
+	}
 
 	public MeterResultBean(String resultado, int score) {
 		super();
