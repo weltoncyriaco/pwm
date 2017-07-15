@@ -21,7 +21,6 @@ public class PassCheckerController {
 	
 	@GetMapping(path = "/{password}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody MeterResultBean test(@PathVariable("password") String password) {
-		
 		return service.checarSenha(password);
 	}
 }

@@ -252,7 +252,7 @@ public class PassCheckerServiceImpl implements PassCheckerService {
 	}
 
 	private void validarSenhaLetrasSequenciais(String senha) {
-		for (int s = Numeros.ZERO; s < Numeros.VINTE_TRES; s++) {
+		for (int s = Numeros.ZERO; s < Numeros.VINTE_E_TRES; s++) {
 			String sFwd = Constantes.ALFABETO.substring(s, (s + Numeros.TRES));
 			String sRev = new StringBuilder(sFwd).reverse().toString();
 			if (senha.toLowerCase().indexOf(sFwd) != Numeros.MENOS_UM || senha.toLowerCase().indexOf(sRev) != Numeros.MENOS_UM) {
