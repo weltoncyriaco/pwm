@@ -57,4 +57,14 @@ public final class Constantes {
 	public static final String UPPERCASE_LETTERS = "Uppercase Letters";
 	
 	public static final String NUMBER_OF_CHARACTERS = "Number of Characters";
+	
+	public static final String SIMBOLO_KEY = "nSymbol";
+	
+	public static final String NUMERO_KEY = "nNumber";
+	
+	public static final String LETRA_MAIUSCULA_KEY = "nAlphaLC";
+	
+	public static final String LETRA_MINUSCULA_KEY = "nAlphaUC";
+	
+	public static final String TAMANHO_KEY = "nLength";
 }

@@ -92,16 +92,16 @@ public class PassCheckerServiceImpl implements PassCheckerService {
 		arrChars[Numeros.QUATRO] = variaveis.getSimbolo();
 		
 		String[] arrCharsIds = new String[Numeros.CINCO];
-		arrCharsIds[Numeros.ZERO] = "nLength";
-		arrCharsIds[Numeros.UM] = "nAlphaUC";
-		arrCharsIds[Numeros.DOIS] = "nAlphaLC";
-		arrCharsIds[Numeros.TRES] = "nNumber";
-		arrCharsIds[Numeros.QUATRO] = "nSymbol";
+		arrCharsIds[Numeros.ZERO] = Constantes.TAMANHO_KEY;
+		arrCharsIds[Numeros.UM] = Constantes.LETRA_MINUSCULA_KEY;
+		arrCharsIds[Numeros.DOIS] = Constantes.LETRA_MAIUSCULA_KEY;
+		arrCharsIds[Numeros.TRES] = Constantes.NUMERO_KEY;
+		arrCharsIds[Numeros.QUATRO] = Constantes.SIMBOLO_KEY;
 		
 		int arrCharsLen = arrChars.length;
 		
 		for (int c=Numeros.ZERO; c < arrCharsLen; c++) {
-			int valorMinimo = ((arrCharsIds[c] == "nLength") ? (Constantes.TAMANHO_MINIMO - Numeros.UM) : Numeros.ZERO);
+			int valorMinimo = ((arrCharsIds[c] == Constantes.TAMANHO_KEY) ? (Constantes.TAMANHO_MINIMO - Numeros.UM) : Numeros.ZERO);
 			if (arrChars[c] == (valorMinimo + Numeros.UM)) {
 				variaveis.incrementarCaractereRequerido();
 			}
